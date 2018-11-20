@@ -4,11 +4,25 @@
 
     btnAjuda.addEventListener("click", function () {
         const ajudas = [
-            "Bem Vindo ao Ceep", "Clique no btn Linhas para mudar o Layout"
+            {conteudo: "Bem Vindo ao Ceep", cor: "#F05450"},
+            {conteudo: "Clique no btn Linhas para mudar o Layout", cor: "#92C4EC"}
         ]
 
         ajudas.forEach(function (ajuda) {
-            alert(ajuda);
+            /* alert(ajuda); */
+            cartao.adiciona(ajuda);
         })
     })
+
+
+    /*
+    com jquery
+    (function () {
+        const btnAjuda = $("#btnAjuda");
+        btnAjuda.removeClass("no-js")
+        btnAjuda.on("click", function() {
+            ...
+        })
+    })()
+    */
 })()
