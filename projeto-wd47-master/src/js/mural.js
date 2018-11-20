@@ -18,7 +18,7 @@ const cartao = (function () {
         $cartao.on("change", function (event) {
             const elementoHtml = event.target // o event é um elemento do DOM e não do jquery
 
-            isRadioTipo = elementoHtml.classList.contains("opcoesDoCartao-radioTipo");
+            const isRadioTipo = elementoHtml.classList.contains("opcoesDoCartao-radioTipo");
 
             if (isRadioTipo) {
                 $cartao.addClass('cartao--muda--cor')
@@ -98,6 +98,15 @@ const cartao = (function () {
 
     return {
         adiciona : adicionaCartaoNoMural
+        
+        /* eu poderia retornar um obj com outras funcoes, e quando eu invocar
+        a const cartao. eu poderia escolher qual funcao invocar
+        
+        adiciona : adicionaCartaoNoMural,
+        remove : removerCartaoDoMural,
+        altera : alterarCartaoDoMural
+
+        */
     }
 
 })()

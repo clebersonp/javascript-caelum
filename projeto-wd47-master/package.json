@@ -1,0 +1,28 @@
+{
+  "name": "projeto-caelum-javascript",
+  "version": "1.0.0",
+  "description": "Projeto para aplicar conceitos de javascript",
+  "main": "babel.config.js",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/babel src --out-dir dist --copy-files --presets @babel/preset-env --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clebersonp/javascript-caelum.git"
+  },
+  "author": "Cleberson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clebersonp/javascript-caelum/issues"
+  },
+  "homepage": "https://github.com/clebersonp/javascript-caelum#readme"
+}
