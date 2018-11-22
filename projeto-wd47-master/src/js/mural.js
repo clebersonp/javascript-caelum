@@ -96,6 +96,20 @@ const cartao = (function () {
         $(".mural").append($novoCartao) // adiciona o elemento jquery no mural
     }
 
+    // carregar os cartoes salvos no servidor, o jsonp é por causa que o endpoint é cross origin
+    $.ajax({
+        url: "https://ceep.herokuapp.com/cartoes/carregar",
+        method: "GET",
+        dataType: "jsonp",
+        data: {usuario: "pauluci.cleberson@gmail.com"},
+        success: function(objeto) {
+            const cartoes = objeto.cartoes
+            cartoes.forEach(function(cartao) {
+                adicionaCartaoNoMural(cartao)
+            })
+        }
+    })
+
     return {
         adiciona : adicionaCartaoNoMural
         
